@@ -14,7 +14,7 @@ export default function Home() {
       <main className={styles.main} role="main">
         <header role="banner">
           <h1 className={styles.title}>
-            Welcome to College Sports <br />Mascots Memory Game
+            Welcome to NY College Sports <br />Mascots Memory Game
           </h1>
         </header>
 
