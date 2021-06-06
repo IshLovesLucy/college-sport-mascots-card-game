@@ -51,11 +51,11 @@
 }
 
 .title,
-.description {
+.call-to-action {
   text-align: center;
 }
 
-.description {
+.call-to-action {
   line-height: 1.5;
   font-size: 1.5rem;
 }
