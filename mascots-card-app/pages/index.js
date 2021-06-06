@@ -1,14 +1,25 @@
-import mascotCardsCollection from '../src/data/cardsCollection'
+//import mascotCardsCollection from '../src/data/cardsCollection'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+// Move this higher folder for sharing, since its SPA property
+const mascotCardsCollection = [
+  { id: 'card01', url: '/img-ny-binghamton-bearcats.png' },
+  { id: 'card02', url: '/img-ny-bmcc.png' },
+  { id: 'card03', url: '/img-ny-bronx-community.png' },
+  { id: 'card04', url: '/img-ny-c1.png' },
+  { id: 'card05', url: '/img-ny-canisius.png' },
+  { id: 'card06', url: '/img-ny-clarkson.png' },
+  { id: 'card07', url: '/img-ny-colgate.png' },
+  { id: 'card08', url: '/img-ny-cortland.png' },
+  { id: 'card09', url: '/img-ny-rit.png' },
+  { id: 'card10', url: '/img-ny-rutgers.png' },
+  { id: 'card11', url: '/img-ny-st-johns.png' },
+  { id: 'card12', url: '/img-ny-syracuse.png' },
+];
 
-console.log(mascotCardsCollection)
 export default function Home() {
-
-  
-
   return (
     <div className={styles.container}>
       <Head>
@@ -25,28 +36,40 @@ export default function Home() {
           </h1>
         </header>
 
-        <ul className={styles.grid}>
-        
+        <ul className={styles.grid} data-card-table>
           {/* {
-            console.log(cardsCollection)}
-          {
-            cardsCollection.forEach(card => {
-              return <li>test</li>;
+            mascotCardsCollection.forEach(card => {
+              console.log(card)
+              return <li>{card}</li>;
             })
-          }
-           */}
-           <li className={styles.card}><img src="/img-ny-bmcc.png" alt="" /></li>
-           <li className={styles.card}><img /></li>
-           <li className={styles.card}><img /></li>
-           <li className={styles.card}><img /></li>
-           <li className={styles.card}><img /></li>
-           <li className={styles.card}><img /></li>
-           <li className={styles.card}><img /></li>
-           <li className={styles.card}><img /></li>
+          } */}
+           <li className={styles.card}><Image src="/img-ny-bmcc.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-c1.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-canisius.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-clarkson.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-colgate.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-cortland.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-rit.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-rutgers.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-st-johns.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-syracuse.png" width={45} height={45} /></li>
 
+           <li className={styles.card}><Image src="/img-ny-bmcc.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-c1.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-canisius.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-clarkson.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-colgate.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-cortland.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-rit.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-rutgers.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-st-johns.png" width={45} height={45} /></li>
+           <li className={styles.card}><Image src="/img-ny-syracuse.png" width={45} height={45} /></li>
         </ul>
       </main>
-
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
