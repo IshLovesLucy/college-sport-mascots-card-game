@@ -1,8 +1,14 @@
+import mascotCardsCollection from '../src/data/cardsCollection'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+
+console.log(mascotCardsCollection)
 export default function Home() {
+
+  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,35 +25,26 @@ export default function Home() {
           </h1>
         </header>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <ul className={styles.grid}>
+        
+          {/* {
+            console.log(cardsCollection)}
+          {
+            cardsCollection.forEach(card => {
+              return <li>test</li>;
+            })
+          }
+           */}
+           <li className={styles.card}><img src="/img-ny-bmcc.png" alt="" /></li>
+           <li className={styles.card}><img /></li>
+           <li className={styles.card}><img /></li>
+           <li className={styles.card}><img /></li>
+           <li className={styles.card}><img /></li>
+           <li className={styles.card}><img /></li>
+           <li className={styles.card}><img /></li>
+           <li className={styles.card}><img /></li>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        </ul>
       </main>
 
       <footer className={styles.footer}>
