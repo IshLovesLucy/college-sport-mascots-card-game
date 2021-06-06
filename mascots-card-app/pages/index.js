@@ -43,7 +43,7 @@ export default function Home() {
               return <li>{card}</li>;
             })
           } */}
-           <li className={styles.card}><Image src="/img-ny-bmcc.png" width={45} height={45} /></li>
+           <li className={`${styles.card} ${styles.cardshow}`}><Image src="/img-ny-bmcc.png" width={45} height={45} /></li>
            <li className={styles.card}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></li>
            <li className={styles.card}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></li>
            <li className={styles.card}><Image src="/img-ny-c1.png" width={45} height={45} /></li>
