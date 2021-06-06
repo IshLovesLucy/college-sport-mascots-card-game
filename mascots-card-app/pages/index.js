@@ -12,11 +12,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main} role="main">
+        <Image src="/hero-fans.jpg" alt="" layout="fill" className={styles.hero} />
         <header role="banner">
           <h1 className={styles.title}>
             Welcome to NY College Sports <br />Mascots Memory Game
           </h1>
-          <Image src="/hero-fans.jpg" alt="" layout="fill" className={styles.hero} />
         </header>
 
         <div className={styles.grid}>
