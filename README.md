@@ -18,4 +18,3 @@ Technical take home assessment - a web-based memory game.
 ## Extra Credit
 
 - [ ] Docs
-- [ ] If intertested I can invite folks into other take home assignment on A11y
