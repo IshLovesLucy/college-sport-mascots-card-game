@@ -44,7 +44,7 @@ export default function Home() {
             setShowFaces(showFaces.concat(index));
             //checkUniqueCardsEventHandler(showFaces[0], index);
             //checkMatch(showFaces[0], index, event);
-            setTimeout(() => { checkMatch(showFaces[0], index, event); }, 2000);
+            setTimeout(() => { checkMatch(showFaces[0], index, event); }, 1500);
           }
           break;
         default:
