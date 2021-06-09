@@ -1,7 +1,7 @@
  # college-sport-mascots-card-game(WIP - MVP)
   Technical take home assessment - a web-based memory game.
 - Be sure to confirm you are running at least `node -v` = v10.24.1
-- Probably best to use Chrome and the SPA will be ready when the main background image loads and the spinner around the favicon stops
+- Probably best to use Chrome and the SPA will be ready when the main background image loads and the spinner around the favicon stops - GO HAWKES!
 ## 3 steps to launch the SPA
     1. git clone git@github.com:IshLovesLucy/college-sport-mascots-card-game.git
     2. cd college-sport-mascots-card-game/mascots-card-app/
