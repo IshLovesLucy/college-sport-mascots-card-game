@@ -18,21 +18,40 @@ const MascotCards = props => {
     ];
   const { imgSource, imgDesc, className, onClick } = props;
   return (
-    // <div className={`grid-card ${className}`} onClick={onClick}>
-    //   <img
-    //     className={`img-thumbnail img-fluid grid-img`}
-    //     src={imgSource}
-    //     alt={imgDesc}
-    //   />
-    // </div>
-    <ul data-card-tabl>
-        {
-            mascotCardsCollection.map(()=>{
-                <li>test</li>
+    <ul className={styles.grid} data-card-table>
+          {/* {
+            mascotCardsCollection.forEach(card => {
+              console.log(card)
+              return <li>{card}</li>;
             })
-        }
-    </ul>
+          } */}
+           <li><div className={styles.card} onClick={console.log('this is hell')}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card} onClick={console.log('this is hell2')}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-c1.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-canisius.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-clarkson.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-colgate.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-cortland.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-rit.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-rutgers.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-st-johns.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-syracuse.png" width={45} height={45} /></div></li>
+
+           <li><div className={styles.card}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-c1.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-canisius.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-clarkson.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-colgate.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-cortland.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-rit.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-rutgers.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-st-johns.png" width={45} height={45} /></div></li>
+           <li><div className={styles.card}><Image src="/img-ny-syracuse.png" width={45} height={45} /></div></li>
+        </ul>
   );
 };
 
-export default MascotCard;
+export default MascotCards;
