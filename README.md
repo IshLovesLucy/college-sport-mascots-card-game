@@ -1,8 +1,10 @@
-    # college-sport-mascots-card-game
-    Technical take home assessment - a web-based memory game.
-
-    ## Required Game Rules
-
+ # college-sport-mascots-card-game
+  Technical take home assessment - a web-based memory game.
+## 3 step to launch the SPA
+    1. git clone git@github.com:IshLovesLucy/college-sport-mascots-card-game.git
+    2. cd college-sport-mascots-card-game/mascots-card-app/
+    3. npm i && npm run dev
+## Required Game Rules
 - [x] At the start of the game, the user is presented with a grid of 24 face-down cards
 - [x] Each card looks identical face-down, but has a face-up value that is matched by only one other card on the table.
 - [x] When the user clicks a card, it flips over revealing its value.
