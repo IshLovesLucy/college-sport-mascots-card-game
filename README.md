@@ -1,5 +1,6 @@
  # college-sport-mascots-card-game
   Technical take home assessment - a web-based memory game.
+- [] Be sure to confirm you are running at least `node -v` = v10.24.1
 ## 3 step to launch the SPA
     1. git clone git@github.com:IshLovesLucy/college-sport-mascots-card-game.git
     2. cd college-sport-mascots-card-game/mascots-card-app/
