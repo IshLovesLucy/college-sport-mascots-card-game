@@ -1,6 +1,9 @@
 import React from "react";
 
 const MascotCards = props => {
+  const {
+    styles
+  } = props;
     // Move this higher folder for sharing, since its SPA property
     const mascotCardsCollection = [
         { id: 'card01', url: '/img-ny-binghamton-bearcats.png' },
