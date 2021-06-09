@@ -1,16 +1,41 @@
 //import mascotCardsCollection from '../src/data/cardsCollection'
 import Head from 'next/head'
 import Image from 'next/image'
-import React, { useState, useEffect, useRef } from "react"
-import ReactDOM from "react-dom"
+import React, { useState } from "react"
 
-import MascotCards from './MascotCard'
+//import MascotCards from './MascotCard'
 
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  function handleClick(event){
-    alert(`You clicked ${event.target.dataset.id}.`);
+  const [showFaces, setShowFaces] = useState([]);
+  const [matchedItems, setMatchedItems] = useState([]);
+  
+  function handleClick(event, elClass, index){
+
+    const cardID = event.target.dataset.cardID;
+    console.log(`You clicked ${elClass}, ${event.target.dataset.cardid}.`);
+    //showFace(elClass)
+    //setShowFaces([cardID]);
+    //console.log(showFaces);
+    if (1) {
+      switch (showFaces.length) {
+        case 0:
+          setShowFaces([index]);
+          break;
+        case 1:
+          if (showFaces[0] !== index) {
+            setShowFaces(showFaces.concat(index));
+            
+          }
+          break;
+        case 2:
+          setShowFaces([index]);
+          break;
+        default:
+          setShowFaces([]);
+      }
+    }
   }
   return (
     <div className={styles.container}>
@@ -35,30 +60,30 @@ export default function Home() {
               return <li>{card}</li>;
             })
           } */}
-           <li><div data-id="card01" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
-           <li><div data-id="card02" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
-           <li><div data-id="card03" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
-           <li><div data-id="card04" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-c1.png" width={45} height={45} /></div></li>
-           <li><div data-id="card05" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-canisius.png" width={45} height={45} /></div></li>
-           <li><div data-id="card06" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-clarkson.png" width={45} height={45} /></div></li>
-           <li><div data-id="card07" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-colgate.png" width={45} height={45} /></div></li>
-           <li><div data-id="card08" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-cortland.png" width={45} height={45} /></div></li>
-           <li><div data-id="card09" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-rit.png" width={45} height={45} /></div></li>
-           <li><div data-id="card10" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-rutgers.png" width={45} height={45} /></div></li>
-           <li><div data-id="card11" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-st-johns.png" width={45} height={45} /></div></li>
-           <li><div data-id="card12" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-syracuse.png" width={45} height={45} /></div></li>
-           <li><div data-id="card01" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
-           <li><div data-id="card02" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
-           <li><div data-id="card03" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
-           <li><div data-id="card04" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-c1.png" width={45} height={45} /></div></li>
-           <li><div data-id="card05" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-canisius.png" width={45} height={45} /></div></li>
-           <li><div data-id="card06" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-clarkson.png" width={45} height={45} /></div></li>
-           <li><div data-id="card07" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-colgate.png" width={45} height={45} /></div></li>
-           <li><div data-id="card08" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-cortland.png" width={45} height={45} /></div></li>
-           <li><div data-id="card09" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-rit.png" width={45} height={45} /></div></li>
-           <li><div data-id="card10" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-rutgers.png" width={45} height={45} /></div></li>
-           <li><div data-id="card11" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-st-johns.png" width={45} height={45} /></div></li>
-           <li><div data-id="card12" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-syracuse.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="1" className={`${styles.card} ${showFaces?.includes(1) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 1)}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="2" className={`${styles.card} ${showFaces?.includes(2) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 2)}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="3" className={`${styles.card} ${showFaces?.includes(3) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 3)}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="4" className={`${styles.card} ${showFaces?.includes(4) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 4)}><Image src="/img-ny-c1.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="5" className={`${styles.card} ${showFaces?.includes(5) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 5)}><Image src="/img-ny-canisius.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="6" className={`${styles.card} ${showFaces?.includes(6) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 6)}><Image src="/img-ny-clarkson.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="7" className={`${styles.card} ${showFaces?.includes(7) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 7)}><Image src="/img-ny-colgate.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="8" className={`${styles.card} ${showFaces?.includes(8) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 8)}><Image src="/img-ny-cortland.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="9" className={`${styles.card} ${showFaces?.includes(9) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 9)}><Image src="/img-ny-rit.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="10" className={`${styles.card} ${showFaces?.includes(10) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 10)}><Image src="/img-ny-rutgers.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="11" className={`${styles.card} ${showFaces?.includes(11) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 11)}><Image src="/img-ny-st-johns.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="12" className={`${styles.card} ${showFaces?.includes(12) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 12)}><Image src="/img-ny-syracuse.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="1" className={`${styles.card} ${showFaces?.includes(1) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 1)}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="2" className={`${styles.card} ${showFaces?.includes(2) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 2)}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="3" className={`${styles.card} ${showFaces?.includes(3) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 3)}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="4" className={`${styles.card} ${showFaces?.includes(4) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 4)}><Image src="/img-ny-c1.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="5" className={`${styles.card} ${showFaces?.includes(5) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 5)}><Image src="/img-ny-canisius.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="6" className={`${styles.card} ${showFaces?.includes(6) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 6)}><Image src="/img-ny-clarkson.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="7" className={`${styles.card} ${showFaces?.includes(7) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 7)}><Image src="/img-ny-colgate.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="8" className={`${styles.card} ${showFaces?.includes(8) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 8)}><Image src="/img-ny-cortland.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="9" className={`${styles.card} ${showFaces?.includes(9) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 9)}><Image src="/img-ny-rit.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="10" className={`${styles.card} ${showFaces?.includes(10) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 10)}><Image src="/img-ny-rutgers.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="11" className={`${styles.card} ${showFaces?.includes(11) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 11)}><Image src="/img-ny-st-johns.png" width={45} height={45} /></div></li>
+           <li><div data-cardid="12" className={`${styles.card} ${showFaces?.includes(12) ? styles.cardshow : ""}`} onClick={()=>handleClick(event, styles.card, 12)}><Image src="/img-ny-syracuse.png" width={45} height={45} /></div></li>
 
         </ul>
       </main>
