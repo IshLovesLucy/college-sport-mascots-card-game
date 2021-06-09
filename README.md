@@ -1,4 +1,4 @@
- # college-sport-mascots-card-game
+ # college-sport-mascots-card-game(WIP - MVP)
   Technical take home assessment - a web-based memory game.
 - [] Be sure to confirm you are running at least `node -v` = v10.24.1
 ## 3 steps to launch the SPA
