@@ -1,6 +1,7 @@
 {
   "name": "mascots-card-app",
   "version": "0.1.0",
+  "author": "Ish et Lucy",
   "private": true,
   "scripts": {
     "dev": "next dev",
