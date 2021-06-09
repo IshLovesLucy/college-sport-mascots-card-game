@@ -121,7 +121,7 @@
   visibility: visible;
 } 
 
-.cardmatched {
+.cardmatched, .cardmatched img{
   visibility: hidden;
 }
 
