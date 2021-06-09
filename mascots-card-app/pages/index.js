@@ -4,9 +4,14 @@ import Image from 'next/image'
 import React, { useState, useEffect, useRef } from "react"
 import ReactDOM from "react-dom"
 
+import MascotCards from './MascotCard'
+
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  function handleClick(event){
+    alert(`You clicked ${event.target.dataset.id}.`);
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -30,31 +35,31 @@ export default function Home() {
               return <li>{card}</li>;
             })
           } */}
-           <li className={`${styles.card} ${styles.cardshow}`}><Image src="/img-ny-bmcc.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-c1.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-canisius.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-clarkson.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-colgate.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-cortland.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-rit.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-rutgers.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-st-johns.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-syracuse.png" width={45} height={45} /></li>
+           <li><div data-id="card01" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
+           <li><div data-id="card02" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
+           <li><div data-id="card03" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
+           <li><div data-id="card04" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-c1.png" width={45} height={45} /></div></li>
+           <li><div data-id="card05" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-canisius.png" width={45} height={45} /></div></li>
+           <li><div data-id="card06" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-clarkson.png" width={45} height={45} /></div></li>
+           <li><div data-id="card07" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-colgate.png" width={45} height={45} /></div></li>
+           <li><div data-id="card08" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-cortland.png" width={45} height={45} /></div></li>
+           <li><div data-id="card09" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-rit.png" width={45} height={45} /></div></li>
+           <li><div data-id="card10" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-rutgers.png" width={45} height={45} /></div></li>
+           <li><div data-id="card11" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-st-johns.png" width={45} height={45} /></div></li>
+           <li><div data-id="card12" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-syracuse.png" width={45} height={45} /></div></li>
+           <li><div data-id="card01" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
+           <li><div data-id="card02" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
+           <li><div data-id="card03" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
+           <li><div data-id="card04" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-c1.png" width={45} height={45} /></div></li>
+           <li><div data-id="card05" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-canisius.png" width={45} height={45} /></div></li>
+           <li><div data-id="card06" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-clarkson.png" width={45} height={45} /></div></li>
+           <li><div data-id="card07" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-colgate.png" width={45} height={45} /></div></li>
+           <li><div data-id="card08" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-cortland.png" width={45} height={45} /></div></li>
+           <li><div data-id="card09" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-rit.png" width={45} height={45} /></div></li>
+           <li><div data-id="card10" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-rutgers.png" width={45} height={45} /></div></li>
+           <li><div data-id="card11" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-st-johns.png" width={45} height={45} /></div></li>
+           <li><div data-id="card12" className={styles.card} onClick={()=>handleClick(event)}><Image src="/img-ny-syracuse.png" width={45} height={45} /></div></li>
 
-           <li className={styles.card}><Image src="/img-ny-bmcc.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-c1.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-canisius.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-clarkson.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-colgate.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-cortland.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-rit.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-rutgers.png" width={45} height={45} /></li>
-           <li className={styles.card}><Image src="/img-ny-st-johns.png" width={45} height={45} /></li>
-           <li className={`${styles.card} ${styles.cardshow}`}><Image src="/img-ny-syracuse.png" width={45} height={45} /></li>
         </ul>
       </main>
       <footer className={styles.footer}>
