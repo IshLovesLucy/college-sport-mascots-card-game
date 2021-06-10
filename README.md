@@ -26,21 +26,21 @@
 
 - [x] Docs
 - Sr FE Job Regs:  
-- - [x] HTML, CSS and JavaScript
-- - [x] Reactjs + Nextjs
-- - [x] Es6 
-- - [x] SASS
-- - [ ] JSON(not required for this code accessment
-- - [x] GIT
-- - **[x] Nodejs
-- - **[x] Docs
+ - [x] HTML, CSS and JavaScript
+ - [x] Reactjs + Nextjs
+ - [x] Es6 
+ - [x] SASS
+ - [ ] JSON(not required for this code accessment
+ - [x] GIT
+ - **[x] Nodejs
+ - **[x] Docs
 
 ## Assumptions
 - The assignment could use grading guidelines, the requirements are too wide open, would of been nice to see grading criteria specific to day to day work at SA Sports
 - For example, A game could be anything - a React Native app?  Electron? SPA?  Windows App?  If its a SPA, are there any cross browser considerations to be made with some of the solutions i.e. we need to support ie11, but one of the solutions uses a javascript/html/css feature which is unsupported
-- - Do we get bonus points for using linters for coding best practices? documentation? optimizations?
+ - Do we get bonus points for using linters for coding best practices? documentation? optimizations?
 - Also if I had more time and depending on the device and tech requirements, perhaps look into animated the cards into turning over and again this depends on the device, project requirements as certain devices have better support for animations.
-- - If we were to use animations, would it be simple CSS? Greensock?  Jquery.
+ - If we were to use animations, would it be simple CSS? Greensock?  Jquery.
 - Also with more time I would of added more React hooks to build out the bonus items
 
 ## Enjoy HAPPY Gaming and Can't wait to Hear your thoughts
