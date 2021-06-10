@@ -13,7 +13,7 @@
 - [x] Each card looks identical face-down, but has a face-up value that is matched by only one other card on the table.
 - [x] When the user clicks a card, it flips over revealing its value.
 - [x] When the user clicks the next card, its value is revealed and then compared against the other face up card. If they are equal, both cards disappear. If they are different, they flip back down.
-- [x] he game continues until there are no cards left
+- [x] the game continues until there are no cards left
 
 ## Optional Game Features
 
@@ -38,8 +38,8 @@
 - The assignment could use grading guidelines, the requirements are too wide open, would of been nice to see grading criteria specific to day to day work at SA Sports
 - For example, A game could be anything - a React Native app?  Electron? SPA?  Windows App?  If its a SPA, are there any cross browser considerations to be made with some of the solutions i.e. we need to support ie11, but one of the solutions uses a javascript/html/css feature which is unsupported
  - Do we get bonus points for using linters for coding best practices? documentation? optimizations?
-- Also if I had more time and depending on the device and tech requirements, perhaps look into animated the cards into turning over and again this depends on the device, project requirements as certain devices have better support for animations.
+- Also if I had more time and depending on the device and tech requirements, perhaps look into animating the cards into turning over and again this depends on the device, project requirements as certain devices have better support for animations.
  - If we were to use animations, would it be simple CSS? Greensock?  Jquery.
-- Also with more time I would of added more React hooks to build out the bonus items
+- Also with more time I would of added more React hooks to build out the bonus items, and make use of camelcasing or hypens in the css and attributes
 
 ## Enjoy HAPPY Gaming and Can't wait to Hear your thoughts
