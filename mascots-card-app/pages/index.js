@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
+export const Home = () => {
   const [showFaces, setShowFaces] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
 
@@ -18,8 +18,7 @@ export default function Home() {
     card1 === card2 ? setMatchedCards([...matchedCards, clickedCard1, clickedCard2]) : setShowFaces([]);
   };
   
-  function handleClick(index){
-
+  const handleClick = (index) => {
     if (!matchedCards.includes(index)) {
       switch (showFaces.length) {
         case 0:
