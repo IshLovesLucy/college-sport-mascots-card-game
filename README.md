@@ -24,7 +24,7 @@
 
 ## Highights
 
-- Sr FE Job Regs:  
+### Sr FE Job Regs:  
  - [x] HTML, CSS and JavaScript
  - [x] Reactjs + Nextjs
  - [x] Es6 
