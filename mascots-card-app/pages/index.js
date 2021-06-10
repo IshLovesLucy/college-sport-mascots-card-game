@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import { cardData } from './../src/data/cardsCollection';
 
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.scss';
 
 export const Home = () => {
   const [showFaces, setShowFaces] = useState([]);
@@ -24,9 +24,9 @@ export const Home = () => {
           setShowFaces([index]);
           break;
         case 1:
-          if (showFaces[0] !== index) {  //when user clicks on the same card
+          if (showFaces[0] !== index) {  // when user clicks on the same card
             setShowFaces(showFaces.concat(index));
-            setTimeout(() => { checkMatch(showFaces[0], index, event); }, 1500);
+            setTimeout(() => { checkMatch(showFaces[0], index, event); }, 1200);
           }
           break;
         default:
