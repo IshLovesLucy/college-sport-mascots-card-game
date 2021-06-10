@@ -9,6 +9,7 @@ import styles from '../styles/Home.module.scss';
 export const Home = () => {
   const [showFaces, setShowFaces] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
+  const matchesCount = matchedCards.length / 2;
   
   /** 
    * Updates states for setMatchedCards or setShowFaces based on Card ids
@@ -89,7 +90,7 @@ export const Home = () => {
 
         <details open>
           <summary>STATS: </summary>
-          <p>Matches = {matchedCards?.length > 0 ? (matchedCards.length / 2) : 0 }</p>
+          <p>Matches = {matchedCards?.length > 0 ? matchesCount : 0 }</p>
           <p>Moves, Time, Reset Button <img src="https://i2.wp.com/www.bapl.org/wp-content/uploads/2019/02/old-under-construction-gif.gif?ssl=1" height="30" /> </p>
         </details>
       </main>
