@@ -1,39 +1,25 @@
-//import mascotCardsCollection from '../src/data/cardsCollection'
-import Head from 'next/head'
-import Image from 'next/image'
-import React, { useState } from "react"
+import Head from 'next/head';
+import Image from 'next/image';
+import React, { useState } from "react";
 
 //import MascotCards from './MascotCard'
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   const [showFaces, setShowFaces] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
 
 
-  const checkMatch = (clickedCard1, clickedCard2, event) => {
+  const checkMatch = (clickedCard1, clickedCard2) => {
     const card1 = document.getElementById(clickedCard1).dataset.cardupid;
     const card2 = document.getElementById(clickedCard2).dataset.cardupid;
-    console.log(card1 == card2, event)
-    card1 === card2 ? setMatchedCards([...matchedCards, clickedCard1, clickedCard2]) : setShowFaces([]) ;
-
-    //const cardID = event.target.dataset.cardID;
-    // if (
-    //   clickedCard1 !== clickedCard2
-    // ) {
-    //   setMatchedCards([...matchedCards, clickedCard1, clickedCard2]);
-    // }
+    
+    card1 === card2 ? setMatchedCards([...matchedCards, clickedCard1, clickedCard2]) : setShowFaces([]);
   };
   
-  function handleClick(event, elClass, index){
+  function handleClick(index){
 
-    const cardID = event.target.dataset.cardupid;
-    console.log(`You clicked ${elClass}, ${event.target.dataset.cardupid}.`);
-    //showFace(elClass)
-    //setShowFaces([cardID]);
-    //console.log(showFaces);
-    // Manage clicks 
     if (!matchedCards.includes(index)) {
       switch (showFaces.length) {
         case 0:
@@ -42,8 +28,6 @@ export default function Home() {
         case 1:
           if (showFaces[0] !== index) {  //when user clicks on the same card
             setShowFaces(showFaces.concat(index));
-            //checkUniqueCardsEventHandler(showFaces[0], index);
-            //checkMatch(showFaces[0], index, event);
             setTimeout(() => { checkMatch(showFaces[0], index, event); }, 1500);
           }
           break;
@@ -68,13 +52,7 @@ export default function Home() {
           </h1>
         </header>
 
-        <ul className={styles.grid} data-card-table>
-          {/* {
-            mascotCardsCollection.forEach(card => {
-              console.log(card)
-              return <li>{card}</li>;
-            })
-          } */}
+        <ul className={styles.grid}>
            <li><div data-cardupid="1" id="1" className={`${styles.card} ${showFaces?.includes(1) ? styles.cardshow : ""} ${matchedCards?.includes(1) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 1)}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
            <li><div data-cardupid="2" id="2" className={`${styles.card} ${showFaces?.includes(2) ? styles.cardshow : ""} ${matchedCards?.includes(2) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 2)}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
            <li><div data-cardupid="3" id="3" className={`${styles.card} ${showFaces?.includes(3) ? styles.cardshow : ""} ${matchedCards?.includes(3) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 3)}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
