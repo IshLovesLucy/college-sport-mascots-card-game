@@ -9,7 +9,13 @@ import styles from '../styles/Home.module.scss';
 export const Home = () => {
   const [showFaces, setShowFaces] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
-
+  
+  /** 
+   * Updates states for setMatchedCards or setShowFaces based on Card ids
+   * 
+   * @param {integer} clickedCard1
+   * @param {integer} clickedCard2
+   */
   const checkMatch = (clickedCard1, clickedCard2, event) => {
     const card1 = document.getElementById(clickedCard1).dataset.cardupid;
     const card2 = document.getElementById(clickedCard2).dataset.cardupid;
@@ -17,6 +23,13 @@ export const Home = () => {
     card1 === card2 ? setMatchedCards([...matchedCards, clickedCard1, clickedCard2]) : setShowFaces([]);
   };
   
+  /** 
+   * Click handler and hook updates
+   * 
+   * @param {integer} index
+   * 
+   * Note:  Probably can refactor event object
+   */
   const handleClick = (event, index) => {
     if (!matchedCards.includes(index)) {
       switch (showFaces.length) {
@@ -24,7 +37,7 @@ export const Home = () => {
           setShowFaces([index]);
           break;
         case 1:
-          if (showFaces[0] !== index) {  // when user clicks on the same card
+          if (showFaces[0] !== index) { /** User clicks on the same card */
             setShowFaces(showFaces.concat(index));
             setTimeout(() => { checkMatch(showFaces[0], index, event); }, 1200);
           }
@@ -66,13 +79,19 @@ export const Home = () => {
                     `} 
                     onClick={()=>handleClick(event, card.id)}
                   >
-                    <Image src={card.src} width={45} height={45} />
+                    <Image src={card.src} width={50} height={50} />
                   </div>
                 </li>
               ); 
             })
           }
         </ul>
+
+        <details open>
+          <summary>STATS: </summary>
+          <p>Matches = {matchedCards?.length > 0 ? (matchedCards.length / 2) : 0 }</p>
+          <p>Moves, Time, Reset Button <img src="https://i2.wp.com/www.bapl.org/wp-content/uploads/2019/02/old-under-construction-gif.gif?ssl=1" height="30" /> </p>
+        </details>
       </main>
       
       <footer className={styles.footer}>
