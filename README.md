@@ -22,9 +22,8 @@
 - [ ] Track and display the total time in minutes and seconds it takes the player to complete the game
 - [ ] Give option to reset the deck and play again
 
-## Extra Credit
+## Highights
 
-- [x] Docs
 - Sr FE Job Regs:  
  - [x] HTML, CSS and JavaScript
  - [x] Reactjs + Nextjs
@@ -32,8 +31,8 @@
  - [x] SASS
  - [ ] JSON(not required for this code accessment
  - [x] GIT
- - **[x] Nodejs
- - **[x] Docs
+ **[x] Nodejs
+ **[x] Docs
 
 ## Assumptions
 - The assignment could use grading guidelines, the requirements are too wide open, would of been nice to see grading criteria specific to day to day work at SA Sports
