@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-//import MascotCards from './MascotCard'
+import { cardData } from './../src/data/cardsCollection';
 
 import styles from '../styles/Home.module.css';
 
@@ -10,15 +10,14 @@ export const Home = () => {
   const [showFaces, setShowFaces] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
 
-
-  const checkMatch = (clickedCard1, clickedCard2) => {
+  const checkMatch = (clickedCard1, clickedCard2, event) => {
     const card1 = document.getElementById(clickedCard1).dataset.cardupid;
     const card2 = document.getElementById(clickedCard2).dataset.cardupid;
     
     card1 === card2 ? setMatchedCards([...matchedCards, clickedCard1, clickedCard2]) : setShowFaces([]);
   };
   
-  const handleClick = (index) => {
+  const handleClick = (event, index) => {
     if (!matchedCards.includes(index)) {
       switch (showFaces.length) {
         case 0:
@@ -35,6 +34,7 @@ export const Home = () => {
       }
     }
   }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -52,33 +52,29 @@ export const Home = () => {
         </header>
 
         <ul className={styles.grid}>
-           <li><div data-cardupid="1" id="1" className={`${styles.card} ${showFaces?.includes(1) ? styles.cardshow : ""} ${matchedCards?.includes(1) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 1)}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="2" id="2" className={`${styles.card} ${showFaces?.includes(2) ? styles.cardshow : ""} ${matchedCards?.includes(2) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 2)}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="3" id="3" className={`${styles.card} ${showFaces?.includes(3) ? styles.cardshow : ""} ${matchedCards?.includes(3) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 3)}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="4" id="4" className={`${styles.card} ${showFaces?.includes(4) ? styles.cardshow : ""} ${matchedCards?.includes(4) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 4)}><Image src="/img-ny-c1.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="5" id="5" className={`${styles.card} ${showFaces?.includes(5) ? styles.cardshow : ""} ${matchedCards?.includes(5) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 5)}><Image src="/img-ny-canisius.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="6" id="6" className={`${styles.card} ${showFaces?.includes(6) ? styles.cardshow : ""} ${matchedCards?.includes(6) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 6)}><Image src="/img-ny-clarkson.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="7" id="7" className={`${styles.card} ${showFaces?.includes(7) ? styles.cardshow : ""} ${matchedCards?.includes(7) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 7)}><Image src="/img-ny-colgate.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="8" id="8" className={`${styles.card} ${showFaces?.includes(8) ? styles.cardshow : ""} ${matchedCards?.includes(8) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 8)}><Image src="/img-ny-cortland.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="9" id="9" className={`${styles.card} ${showFaces?.includes(9) ? styles.cardshow : ""} ${matchedCards?.includes(9) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 9)}><Image src="/img-ny-rit.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="10" id="10" className={`${styles.card} ${showFaces?.includes(10) ? styles.cardshow : ""} ${matchedCards?.includes(10) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 10)}><Image src="/img-ny-rutgers.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="11" id="11" className={`${styles.card} ${showFaces?.includes(11) ? styles.cardshow : ""} ${matchedCards?.includes(11) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 11)}><Image src="/img-ny-st-johns.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="12" id="12" className={`${styles.card} ${showFaces?.includes(12) ? styles.cardshow : ""} ${matchedCards?.includes(12) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 12)}><Image src="/img-ny-syracuse.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="1" id="13" className={`${styles.card} ${showFaces?.includes(13) ? styles.cardshow : ""} ${matchedCards?.includes(13) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 13)}><Image src="/img-ny-bmcc.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="2" id="14" className={`${styles.card} ${showFaces?.includes(14) ? styles.cardshow : ""} ${matchedCards?.includes(14) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 14)}><Image src="/img-ny-binghamton-bearcats.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="3" id="15" className={`${styles.card} ${showFaces?.includes(15) ? styles.cardshow : ""} ${matchedCards?.includes(15) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 15)}><Image src="/img-ny-bronx-community.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="4" id="16" className={`${styles.card} ${showFaces?.includes(16) ? styles.cardshow : ""} ${matchedCards?.includes(16) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 16)}><Image src="/img-ny-c1.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="5" id="17" className={`${styles.card} ${showFaces?.includes(17) ? styles.cardshow : ""} ${matchedCards?.includes(17) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 17)}><Image src="/img-ny-canisius.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="6" id="18" className={`${styles.card} ${showFaces?.includes(18) ? styles.cardshow : ""} ${matchedCards?.includes(18) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 18)}><Image src="/img-ny-clarkson.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="7" id="19" className={`${styles.card} ${showFaces?.includes(19) ? styles.cardshow : ""} ${matchedCards?.includes(19) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 19)}><Image src="/img-ny-colgate.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="8" id="20" className={`${styles.card} ${showFaces?.includes(20) ? styles.cardshow : ""} ${matchedCards?.includes(20) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 20)}><Image src="/img-ny-cortland.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="9" id="21" className={`${styles.card} ${showFaces?.includes(21) ? styles.cardshow : ""} ${matchedCards?.includes(21) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 21)}><Image src="/img-ny-rit.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="10" id="22" className={`${styles.card} ${showFaces?.includes(22) ? styles.cardshow : ""} ${matchedCards?.includes(22) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 22)}><Image src="/img-ny-rutgers.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="11" id="23" className={`${styles.card} ${showFaces?.includes(23) ? styles.cardshow : ""} ${matchedCards?.includes(23) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 23)}><Image src="/img-ny-st-johns.png" width={45} height={45} /></div></li>
-           <li><div data-cardupid="12" id="24" className={`${styles.card} ${showFaces?.includes(24) ? styles.cardshow : ""} ${matchedCards?.includes(24) ? styles.cardmatched : ""}`} onClick={()=>handleClick(event, styles.card, 24)}><Image src="/img-ny-syracuse.png" width={45} height={45} /></div></li>
-
+          {
+            cardData.map(card =>{
+              return (
+                <li key={card.id}>
+                  <div 
+                    data-cardupid={card.cardupid}
+                    id={card.id} 
+                    className={`
+                      ${styles.card} 
+                      ${showFaces?.includes(card.id) ? styles.cardshow : ""} 
+                      ${matchedCards?.includes(card.id) ? styles.cardmatched : ""}
+                    `} 
+                    onClick={()=>handleClick(event, card.id)}
+                  >
+                    <Image src={card.src} width={45} height={45} />
+                  </div>
+                </li>
+              ); 
+            })
+          }
         </ul>
       </main>
+      
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -94,3 +90,5 @@ export const Home = () => {
     </div>
   )
 }
+
+export default Home;
