@@ -1,4 +1,4 @@
- # college-sport-mascots-card-game(WIP - MVP)
+ # college-sport-mascots-card-game(MVP)
   Technical take home assessment - a web-based memory game.
 - Be sure to confirm you are running at least `node -v` = v10.24.1
 - Probably best to use Chrome and the SPA will be ready when the main background image loads and the spinner around the favicon stops - GO HAWKES!
