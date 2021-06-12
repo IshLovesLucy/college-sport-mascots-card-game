@@ -24,7 +24,7 @@
 
 ## Highights
 
-### Sr FE Job Regs:  
+### Sr FE Job Reqs:  
  - [x] HTML, CSS and JavaScript
  - [x] Reactjs + Nextjs
  - [x] Es6 
@@ -41,5 +41,7 @@
 - Also if I had more time and depending on the device and tech requirements, perhaps look into animating the cards into turning over and again this depends on the device, project requirements as certain devices have better support for animations.
  - If we were to use animations, would it be simple CSS? Greensock?  Jquery.
 - Also with more time I would of added more React hooks to build out the bonus items, and make use of camelcasing or hypens in the css and attributes
+- DUH should of make Colgate One and 13
+- Also a sorting shuffling kinda UI would of been nice
 
 ## Enjoy HAPPY Gaming and Can't wait to Hear your thoughts
